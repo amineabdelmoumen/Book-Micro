@@ -25,7 +25,7 @@ pipeline {
   
     stage("Pull") {
       steps {
-        withCredentials([usernamePassword(credentialsId: 'amineabdelmoumen', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD') {
+        withCredentials([usernamePassword(credentialsId: 'amineabdelmoumen', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']) {
           sh "ssh docker login -u ${USERNAME} -p ${PASSWORD}"
           sh "ssh docker pull customer-service:latest"
         }
