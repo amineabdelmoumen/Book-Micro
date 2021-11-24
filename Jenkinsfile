@@ -15,7 +15,7 @@ pipeline {
     stage('Make Container') {
       steps {
       sh "docker build -t customer-service:${env.BUILD_ID} ."
-      sh "docker tag snscaimito/ledger-service:${env.BUILD_ID} snscaimito/ledger-service:latest"
+       
       }
     }
     
