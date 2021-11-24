@@ -29,7 +29,8 @@ pipeline {
           sh "ssh docker login -u ${USERNAME} -p ${PASSWORD}"
           sh "ssh docker pull customer-service:latest"
         }
-      }
+      
   }
   }
+}
 }
