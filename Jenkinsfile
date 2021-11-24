@@ -27,7 +27,7 @@ pipeline {
       steps {
         withCredentials([usernamePassword(credentialsId: 'amineabdelmoumen', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
           sh "docker login -u ${USERNAME} -p ${PASSWORD}"
-          sh "docker push amineabdelmoumen/book-store-microservice:customer-service:latest"
+          sh "docker push amineabdelmoumen/book-store-microservice:customer-service:${env.BUILD_ID}"
         }
       
   }
