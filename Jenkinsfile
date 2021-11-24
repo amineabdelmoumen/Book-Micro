@@ -26,8 +26,8 @@ pipeline {
     stage("Pull") {
       steps {
         withCredentials([usernamePassword(credentialsId: 'amineabdelmoumen', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-          sh "ssh docker login -u ${USERNAME} -p ${PASSWORD}"
-          sh "ssh docker pull customer-service:latest"
+          sh "docker login -u ${USERNAME} -p ${PASSWORD}"
+          sh "docker push amineabdelmoumen/book-store-microservice:customer-service:latest"
         }
       
   }
