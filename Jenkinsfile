@@ -27,9 +27,9 @@ pipeline {
       steps {
         withCredentials([usernamePassword(credentialsId: 'amineabdelmoumen', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
           sh "docker login -u ${USERNAME} -p ${PASSWORD}"
-          sh "docker tag customer-service:${env.BUILD_ID} amineabdelmoumen/book-store-microservice:customer-service-image"
+          sh "docker tag customer-service:${env.BUILD_ID} amineabdelmoumen/customer-service-image"
          
-          sh "docker push amineabdelmoumen/book-store-microservice:customer-service-image"
+          sh "docker push amineabdelmoumen/customer-service-image"
         }
       
   }
