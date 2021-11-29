@@ -1,10 +1,10 @@
-package inpt.ac.discoveryservice;
+package inpt.ac.billingservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DiscoveryServiceApplicationTests {
+class BillingServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
